@@ -1,0 +1,324 @@
+* {
+     margin: 0;
+     padding: 0;
+}
+
+::-webkit-scrollbar {
+     display: none;
+}
+
+.nunito-sans {
+     font-family: "Nunito Sans", sans-serif;
+     font-optical-sizing: auto;
+     font-style: normal;
+     font-variation-settings:
+          "wdth" 100,
+          "YTLC" 500;
+}
+
+.container {
+     width: 100%;
+     height: 100vh;
+     color: #fff;
+     background-repeat: no-repeat;
+     background-size: cover;
+     background-color: #161616;
+}
+
+.bg-cover {
+     width: 100%;
+     height: 100%;
+     background-color: rgba(0, 0, 0, 0.192);
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+}
+
+.searchbox {
+     width: 100%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+
+.searchbox input {
+     width: 100%;
+     height: 40px;
+     margin: 10px 0;
+     border-radius: 8px;
+     border: none;
+     outline: none;
+     padding: 0px 8px;
+     color: #000000;
+     font-size: 14px;
+     background-color: rgb(255, 255, 255);
+}
+
+.searchbox input::placeholder {
+     color: #000000;
+}
+
+.container .box {
+     width: 90%;
+     height: auto;
+     display: flex;
+     justify-content: space-around;
+     align-items: center;
+}
+
+.left {
+     width: 50%;
+     height: 100%;
+     padding: 0px 15px;
+     border-radius: 8px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+}
+
+.right {
+     width: max-content;
+     padding: 20px 15px;
+     border-radius: 8px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+     background-color: rgba(27, 27, 27, 0.596);
+}
+
+.left .weather {
+     width: 100%;
+     height: 200px;
+     margin: 10px 0px;
+     padding: 8px 20px;
+     display: flex;
+     border-radius: 8px;
+     justify-content: space-between;
+     align-items: center;
+     background-color: rgba(27, 27, 27, 0.596);
+}
+
+.left .weather .weather-info {
+     width: 50%;
+     height: 100%;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-around;
+     align-items: self-start;
+}
+
+.left .weather .weather-info h1 {
+     font-size: 35px;
+}
+
+.left .weather .weather-info sup {
+     position: relative;
+     top: -10px;
+     font-size: 15px;
+}
+
+.left .forecast {
+     width: 100%;
+     margin: 10px 0px;
+     padding: 10px 20px;
+     border-radius: 8px;
+     display: flex;
+     justify-content: center;
+     align-items: start;
+     flex-direction: column;
+     background-color: rgba(27, 27, 27, 0.596);
+}
+
+.left .forecast .box {
+     width: 100%;
+     /* overflow-x: scroll;
+     overflow-y: hidden;
+     white-space: nowrap;
+     display: block; */
+     display: flex;
+     flex-wrap: nowrap;
+     overflow-x: auto;
+}
+
+.left .forecast .box .card {
+     cursor: pointer;
+     /* display: inline-block; */
+     /* text-align: center; */
+     width: 150px;
+     height: 90px;
+     margin: 10px 0px;
+     font-size: 14px;
+     /* border-right: 1px solid rgb(255, 255, 255); */
+     flex: 0 0 auto;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-around;
+     align-items: center;
+}
+
+
+.left .air {
+     width: 100%;
+     display: flex;
+     justify-content: center;
+     align-items: start;
+     flex-direction: column;
+     border-radius: 8px;
+     margin: 10px 0px;
+     padding: 8px 20px;
+     background-color: rgba(27, 27, 27, 0.596);
+}
+
+.left .air .box {
+     width: 100%;
+     height: 100%;
+     margin: 8px 0px;
+     display: flex;
+     justify-content: space-around;
+     align-items: center;
+     flex-wrap: wrap;
+}
+
+.left .air .box .card {
+     width: 90px;
+     height: 90px;
+     padding: 5px 2px;
+     border-radius: 8px;
+     font-size: 14px;
+     display: flex;
+     justify-content: space-around;
+     align-items: center;
+     flex-direction: column;
+     background-color: rgba(0, 0, 0, 0.616);
+}
+
+.right .box {
+     height: 100%;
+     margin: 10px;
+     padding: 5px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+}
+
+.right .box .card {
+     width: 300px;
+     height: 50px;
+     margin: 10px;
+     display: flex;
+     font-size: 14px;
+     justify-content: space-between;
+     align-items: center;
+     border-bottom: 1px solid rgb(255, 255, 255);
+}
+
+.permission-box{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+     width: 50%;
+}
+
+@media (max-width:620px) {
+     .container {
+          min-height: 100vh;
+          height: auto;
+     }
+
+     .bg-cover {
+          min-height: 100vh;
+          height: auto;
+     }
+
+     .container .box {
+          margin: 80px 0px;
+          width: 100%;
+          flex-direction: column;
+     }
+
+     .searchbox {
+          position: absolute;
+          top: 0;
+          width: 80%;
+          margin: 15px 0px;
+     }
+
+     .searchbox input {
+          margin: 0;
+          color: #fff;
+          background-color: rgb(31, 31, 31);
+     }
+
+     .searchbox input::placeholder {
+          color: #fff;
+     }
+
+     .left,
+     .right {
+          width: 80%;
+     }
+
+     .left .weather {
+          padding: 15px;
+     }
+
+     .left .forecast {
+          margin: 10px 0;
+          padding: 10px 15px;
+          align-items: center;
+     }
+
+     .left .forecast .box {
+          margin: 10px;
+          flex-direction: row;
+     }
+
+     .left .forecast .box .card {
+          width: 100px;     
+          height: 120px;
+          flex: none;
+          margin: 0px 8px;
+          padding: 8px;
+          border-radius: 0px;
+     }
+
+     .left .air {
+          padding: 15px;
+          align-items: center;
+          margin: 10px 0px;
+     }
+     
+     .left .air .box{
+          margin: 10px 0px;
+     }
+
+     .left .air .box .card {
+          width: 80%;
+          height: 130px;
+          margin: 15px 0px;
+     }
+
+     .right {
+          margin: 10px 0;
+     }
+
+     .right .box {
+          width: 100%;
+          margin: 5px 0px;
+          padding: 0;
+     }
+
+     .right .box .card {
+          width: 100%;
+          margin: 10px 0px;
+     }
+
+     .permission-box{
+          width: 100%;
+     }
+}
